@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Console Online</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    
+    <body>
+        <div id="topBar">
+            <span id="title"><em>Java</em>Script Online</span>
+        </div>
+        
+        <div id="console">
+            <div id="settings">
+                <button class="material-button red" onclick="clearLog()"><span>Clear Console</span></button>
+                <!--<button class="material-button red" onclick="reloadPage()"><span>Reload Page</span></button>-->
+                <button class="material-button red" onclick="runCode()"><span>Run Code</span></button>
+                <a href="http://ronakshah.net" target="_blank"><button class="material-button orange"><span>Main Website</span></button></a>
+
+            </div>
+            
+            <div id="content">
+                <div id="left">
+                    <textarea id="jscontent" placeholder="Write Javascript Here!"></textarea>
+                </div>
+
+                <div id="right">
+                    <ul id="log">
+                        <!--    The Javascript Will Put Elements Here   -->
+                    </ul>
+                </div>
+            </div>
+	   </div>
+    </body>
+    
+    <script src="js/console.js"></script>
+    <script src="js/compile.js"></script>
+    <script src="js/script.js"></script>
+</html>
