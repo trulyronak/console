@@ -18,11 +18,7 @@ var textClr = "";
 
 var display = document.getElementById("display");
 var runButton = document.getElementById("runButton");
-	runButton.onclick = function(){
-        run();
-       
-		localStorage.setItem("htmlcode", textEditor.value);
-	};
+	
 
 function runCode() {
     var el = document.getElementById('jscontent');
