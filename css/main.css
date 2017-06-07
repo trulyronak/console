@@ -146,6 +146,17 @@ textarea {
   background-color: #d35400;
 }
 
+.material-button.blue {
+  background-color: #4E95FE;
+}
+
+.material-button.blue:hover, .material-button.blue:focus {
+  background-color: #3747A9;
+}
+
+.modal-content {
+    color: black !important;
+}
 .material-button.red {
   background-color: #e74c3c;
 }

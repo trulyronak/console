@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Javascript Console Online</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-    </head>
-    
-    <body>
-        <div id="topBar">
-            <span id="title"><em>Java</em>Script Online</span>
+
+<head>
+    <title>Javascript Console Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+    <div id="topBar">
+        <span id="title"><em>Java</em>Script Online</span>
+    </div>
+
+    <div id="console">
+        <div id="settings">
+            <button class="material-button red" onclick="clearLog()"><span>Clear Console</span></button>
+            <!--<button class="material-button red" onclick="reloadPage()"><span>Reload Page</span></button>-->
+            <button class="material-button red" onclick="runCode()"><span>Run Code</span></button>
+            <button class="material-button blue" onclick="saveCode()"><span>Save Code</span></button>
+
+            <button class="material-button blue" onclick="showHelp()"><span>Keyboard Shortcuts</span></button>
+
+            <a href="https://github.com/ronakdev/console" target="_blank"><button class="material-button orange"><span>View Github</span></button></a>
+
+            <a href="http://ronakshah.net" target="_blank"><button class="material-button orange"><span>Main Website</span></button></a>
+
         </div>
-        
-        <div id="console">
-            <div id="settings">
-                <button class="material-button red" onclick="clearLog()"><span>Clear Console</span></button>
-                <!--<button class="material-button red" onclick="reloadPage()"><span>Reload Page</span></button>-->
-                <button class="material-button red" onclick="runCode()"><span>Run Code</span></button>
-                <a href="https://github.com/ronakdev/console" target="_blank"><button class="material-button orange"><span>View Github</span></button></a>
 
-                <a href="http://ronakshah.net" target="_blank"><button class="material-button orange"><span>Main Website</span></button></a>
-
+        <div id="content">
+            <div id="left">
+                <textarea id="jscontent" placeholder="Write Javascript Here!"></textarea>
             </div>
-            
-            <div id="content">
-                <div id="left">
-                    <textarea id="jscontent" placeholder="Write Javascript Here!"></textarea>
-                </div>
 
-                <div id="right">
-                    <ul id="log">
-                        <!--    The Javascript Will Put Elements Here   -->
-                    </ul>
-                </div>
+            <div id="right">
+                <ul id="log">
+                    <!--    The Javascript Will Put Elements Here   -->
+                </ul>
             </div>
-	   </div>
-    </body>
+        </div>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Keyboard Shortcuts</h4>
+            <ul>
+                <li>
+                    <div class="chip"><code>ctrl-enter</code></div> or
+                    <div class="chip"><code>cmd-enter</code></div>: Run Code</li>
+                <li>
+                    <div class="chip"><code>ctrl-l</code></div> or
+                    <div class="chip"><code>cmd-l</code></div>: Clear Console</li>
+                <li>
+                    <div class="chip"><code>ctrl-s</code></div> or
+                    <div class="chip"><code>cmd-s</code></div>: Save Code</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Got it, thanks</a>
+        </div>
+    </div>
     
-    <script src="js/console.js"></script>
-    <script src="js/compile.js"></script>
-    <script src="js/script.js"></script>
+</body>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+<script src="js/console.js"></script>
+<script src="js/compile.js"></script>
+<script src="js/script.js"></script>
+
 </html>
