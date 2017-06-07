@@ -1,7 +1,6 @@
 var startupCode = "/*\n \
-	Welcome to Javascript Online!\n \
+	Welcome to JS Console!\n \
 \n \
-	Here, you'll find a convenient place to tryout javascript algorithms / learn javascript.\n \
 \n \
 	If you have any questions, feel free to email me at contact@ronakshah.net\n \
 \n \
