@@ -1,3 +1,29 @@
+var startupCode = "/*\n \
+	Welcome to Javascript Online!\n \
+\n \
+	Here, you'll find a convenient place to tryout javascript algorithms / learn javascript.\n \
+\n \
+	If you have any questions, feel free to email me at contact@ronakshah.net\n \
+\n \
+	If you have any feature requests, please submit an issue request on Github\n \
+*/\n \
+\n \
+/*Example Code*/\n \
+/* Returns the specified term of the fibonacci sequence */\n \
+function fib(termNum) {\n \
+    if (termNum == 0 || termNum == 1) {\n \
+        return termNum\n \
+    } else {\n \
+        return fib(termNum - 1) + fib(termNum - 2)\n \
+    }\n \
+}\n \
+\n \
+//prints terms of the fibonacci sequence from the initial term to the 9th term\n \
+for (var n = 0; n < 10; n++) {\n \
+    console.log(fib(n))\n \
+}\n \
+"
+
 function setCookie(name, value) {
     var today = new Date();
     var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
@@ -26,6 +52,7 @@ console.log = function (msg) {
 
 function clearLog() {
     document.getElementById("log").innerHTML = "";
+    Materialize.toast("Console Cleared", 4000)
 }
 
 function reloadPage() {
@@ -38,6 +65,9 @@ $(document).ready(function () {
     if (savedCode) {
         document.getElementById('jscontent').value = savedCode
 
+    }
+    else {
+        document.getElementById('jscontent').value = startupCode
     }
 });
 

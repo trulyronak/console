@@ -7,6 +7,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
+
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 
@@ -32,7 +33,32 @@
 
         <div id="content">
             <div id="left">
-                <textarea id="jscontent" placeholder="Write Javascript Here!"></textarea>
+                <textarea id="jscontent" placeholder="Write Javascript Here!" name="code">
+/*
+	Welcome to Javascript Online!
+
+	Here, you'll find a convenient place to tryout javascript algorithms / learn javascript.
+
+	If you have any questions, feel free to email me at contact@ronakshah.net
+
+	If you have any feature requests, please submit an issue request on Github
+*/
+
+/* Returns the specified term of the fibonacci sequence */
+function fib(termNum) {
+	if (termNum == 0 || termNum == 1) {
+		return termNum
+	}
+	else {
+		return fib(termNum -1) + fib(termNum -2)
+	}
+}
+
+//prints terms of the fibonacci sequence from the initial term to the 9th term
+for (var n = 0; n < 10; n++) {
+	console.log(fib(n))
+}
+                </textarea>
             </div>
 
             <div id="right">
@@ -66,6 +92,7 @@
     </div>
     
 </body>
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
